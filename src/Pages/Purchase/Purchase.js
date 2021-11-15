@@ -17,7 +17,7 @@ const Purchase = () => {
         data.status = 'pending';
         data.img = singleItem?.img;
         data.price = singleItem?.price
-        fetch('http://localhost:7000/order',{
+        fetch('https://vast-tor-10730.herokuapp.com/order',{
             method:'POST',
             headers : {'content-type': 'application/json'},
             body:JSON.stringify(data)
@@ -31,7 +31,7 @@ const Purchase = () => {
 
 
     useEffect(()=>{
-        fetch(`http://localhost:7000/products/${id}`)
+        fetch(`https://vast-tor-10730.herokuapp.com/products/${id}`)
         .then(res => res.json())
         .then(data => setSingleItem(data))
     },[])

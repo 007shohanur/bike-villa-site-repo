@@ -12,7 +12,7 @@ const MyOrder = () => {
     const [allOrders,setAllOrders] = useState([])
 
     useEffect(()=> {
-        fetch(`http://localhost:7000/order/${user?.email}`)
+        fetch(`https://vast-tor-10730.herokuapp.com/order/${user?.email}`)
         .then(res => res.json())
         .then(data => setAllOrders(data))
     },[user?.email])
@@ -21,7 +21,7 @@ const MyOrder = () => {
     const deleteBtn = id => {
         const confirm = window.confirm('Are you sure to cancel this order? Think again...')
         if (confirm) {
-            fetch(`http://localhost:7000/order/${id}`,{
+            fetch(`https://vast-tor-10730.herokuapp.com/order/${id}`,{
             method:'DELETE'
         }).then(res => res.json())
         .then(data => {
@@ -46,7 +46,7 @@ const MyOrder = () => {
                                 <h5>${order?.price}</h5>
                             </div>
                             <div>
-                                <button onClick={()=>deleteBtn(order?._id)} className="fs-3">Delete</button>
+                                <button btn-success onClick={()=>deleteBtn(order?._id)} className="fs-3 bg-success ">Delete</button>
                             </div>
                         </div>
                     </div>)

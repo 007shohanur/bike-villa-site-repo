@@ -7,7 +7,7 @@ const Explore = () => {
     const [allItems,setAllItems] = useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:7000/products')
+        fetch('https://vast-tor-10730.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setAllItems(data))
     },[])

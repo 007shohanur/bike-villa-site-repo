@@ -12,7 +12,7 @@ const Review = () => {
             return
         }
         data.img = user?.photoURL || 'https://res.cloudinary.com/teepublic/image/private/s--SC6WBeLv--/c_crop,x_10,y_10/c_fit,h_830/c_crop,g_north_west,h_1038,w_1038,x_-201,y_-104/l_upload:v1565806151:production:blanks:vdbwo35fw6qtflw9kezw/fl_layer_apply,g_north_west,x_-312,y_-215/b_rgb:000000/c_limit,f_jpg,h_630,q_90,w_630/v1591166209/production/designs/10929272_0.jpg'
-        fetch('https://immense-falls-01294.herokuapp.com/review',{
+        fetch('https://vast-tor-10730.herokuapp.com/review',{
             method:'POST',
             headers:{'content-type':'application/json'},
             body:JSON.stringify(data)
